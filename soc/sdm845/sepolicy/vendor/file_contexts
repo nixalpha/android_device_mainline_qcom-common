@@ -1,0 +1,4 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+/(vendor|system/vendor)/bt_firmware(/.*)?	u:object_r:firmware_mnt_file:s0

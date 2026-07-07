@@ -43,6 +43,16 @@ mkdir {
     }),
 }
 
+mkdir {
+    name: "mainline_qcom-common_vendor_bt_firmware_mountpoint",
+    dir: "bt_firmware",
+    vendor: true,
+    enabled: select(soong_config_variable("mainline_qcom_common", "path_hardware_qcom_caf_common_is_absent"), {
+        true: true,
+        default: false,
+    }),
+}
+
 phony {
     name: "hexagonrpcd_common_phony",
     required: [

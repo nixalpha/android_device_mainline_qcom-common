@@ -55,6 +55,16 @@ PRODUCT_PACKAGES += \
     vendor_firmware_mnt_mountpoint
 endif
 
+ifeq ($(TARGET_USES_VENDOR_BT_FIRMWARE_MOUNTPOINT),true)
+ifeq ($(SOONG_CONFIG_mainline_qcom_common_path_hardware_qcom_caf_common_is_absent),true)
+PRODUCT_PACKAGES += \
+    mainline_qcom-common_vendor_bt_firmware_mountpoint
+else
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint
+endif
+endif
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(MAINLINE_QCOM_COMMON_PATH)/overlays/overlay
