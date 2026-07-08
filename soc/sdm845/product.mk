@@ -15,7 +15,6 @@ PRODUCT_PACKAGES += \
 TARGET_USES_VENDOR_BT_FIRMWARE_MOUNTPOINT := true
 
 PRODUCT_PACKAGES += \
-    firmware_ath10k_WCN3990_hw1.0_board-2.bin \
     firmware_ath10k_WCN3990_hw1.0_firmware-5.bin \
     linux_firmware_qcom-a630
 
@@ -31,6 +30,8 @@ PRODUCT_PACKAGES += \
 
 # Modem
 PRODUCT_PACKAGES += \
+    pd-mapper \
+    pd-mapper.rc \
     rmtfs \
     rmtfs.rc \
     tqftpserv \
